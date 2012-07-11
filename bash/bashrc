@@ -1,0 +1,22 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
+
+# User specific aliases and functions
+export RED="\[\033[0;31m\]"
+export YELLOW="\[\033[0;33m\]"
+export GREEN="\[\033[0;32m\]"
+source ~/.git-completion.sh
+complete -o default -o nospace -F _git_checkout gc
+complete -o default -o nospace -F _git_status gs
+complete -o default -o nospace -F _git_branch gb
+
+PS1="$RED[\u@\h:\w]$YELLOW\$(__git_ps1)$GREEN\$ "
+
+# git aliases
+alias gs='git status'
+alias gc='git checkout'
+alias gb='git branch'
