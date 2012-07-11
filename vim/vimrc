@@ -1,0 +1,59 @@
+" tab settings
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+set smartindent
+set autoindent
+
+" this fixes weird syntax highlighting issues when we jump around the files sometimes
+autocmd BufEnter * : syntax sync fromstart
+
+" a few other things that makes vim better
+set nocompatible
+set encoding=utf-8
+set scrolloff=3 
+set showmode
+set showcmd
+set wildmenu
+set wildmode=list:longest
+set cursorline
+set ttyfast
+set backspace=indent,eol,start
+set number
+
+" better searching
+set incsearch
+set ignorecase
+set smartcase
+set showmatch
+set hlsearch
+
+" so that we can do python style regex?
+nnoremap / /\v
+vnoremap / /\v
+
+" use tab to match bracket pairs
+nnoremap <tab> %
+vnoremap <tab> %
+
+" handling long lines
+set wrap
+
+" colorscheme
+syntax enable
+set t_Co=256
+colorscheme pychimp
+
+let mapleader = ","
+" to clear the highlights
+nnoremap <leader><space> :noh<cr>
+" toggle line numbering
+nnoremap <leader>n :set invnumber<cr>
+" split windows
+nnoremap <leader>s <C-w>v<C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
