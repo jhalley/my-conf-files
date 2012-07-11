@@ -1,0 +1,1 @@
+caption always "%{Yb} %D %Y-%02m-%02d %0c:%s %{k}|%{G} %l %{k}|%{W} %-w%{+u}%n %t%{-u}%+w"
