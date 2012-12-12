@@ -51,6 +51,8 @@ let mapleader = ","
 nnoremap <leader><space> :noh<cr>
 " toggle line numbering
 nnoremap <leader>n :set invnumber<cr>
+" toggle cursorcolumn
+nnoremap <leader>cc :set invcursorcolumn<cr>
 " split windows
 nnoremap <leader>s <C-w>v<C-w>l
 nnoremap <C-h> <C-w>h
