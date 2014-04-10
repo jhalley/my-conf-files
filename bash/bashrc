@@ -21,3 +21,6 @@ alias gs='git status'
 alias gc='git checkout'
 alias gb='git branch'
 alias gl='git lg'   # git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+
+# other aliases
+alias ls='ls -G'
