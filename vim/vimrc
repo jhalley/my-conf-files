@@ -45,7 +45,7 @@ set wrap
 " colorscheme
 syntax enable
 set t_Co=256
-colorscheme pychimp
+colorscheme desertEx
 
 let mapleader = ","
 " to clear the highlights
