@@ -19,6 +19,7 @@ set showcmd
 set wildmenu
 set wildmode=list:longest
 set cursorline
+set cursorcolumn
 set ttyfast
 set backspace=indent,eol,start
 set number
