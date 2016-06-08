@@ -1,20 +1,23 @@
-# .bashrc
+# .profile
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
         . /etc/bashrc
 fi
 
-# User specific aliases and functions
-export RED="\[\033[0;31m\]"
-export YELLOW="\[\033[0;33m\]"
-export GREEN="\[\033[0;32m\]"
-source ~/.git-completion.sh
-complete -o default -o nospace -F _git_checkout gc
-complete -o default -o nospace -F _git_status gs
-complete -o default -o nospace -F _git_branch gb
+# Load in the git branch prompt script.
+source ~/.git-prompt.sh
+#export GITAWAREPROMPT=~/.bash/git-aware-prompt
+export GITAWAREPROMPT=~/Documents/personal/code/git-aware-prompt
+source "${GITAWAREPROMPT}/main.sh"
 
-PS1="$RED[\u@\h:\w]$YELLOW\$(__git_ps1)$GREEN\$ "
+# User specific aliases and functions
+
+export PATH=~/bin:$PATH
+export PS1='\[\e[32m\]\u\[\e[36m\]@\h \[\e[33m\]\w\[\e[0m\] \[$txtcyn\]$git_branch\[$txtred\]$git_dirty\[$txtrst\]\$ '
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
 
 # git aliases
 alias gs='git status'
